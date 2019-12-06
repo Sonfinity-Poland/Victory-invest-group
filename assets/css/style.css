@@ -177,6 +177,42 @@ section {
     color: #000;
 }
 
+.section-grey {
+    background: #f7f8fa;
+}
+
+.client-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px #8282822e;
+    margin-top: 20px;
+}
+
+.client-box .avatar {
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 20px;
+}
+
+.client-box strong {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 20px;
+}
+
+.stars {
+    color: #ffa605;
+    margin-bottom: 20px;
+}
+
+
 @media (min-width: 768px) { 
     .main-title {
         font-size: 54px;
