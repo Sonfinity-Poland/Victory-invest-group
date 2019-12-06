@@ -1,3 +1,7 @@
+p {
+    color: #616B7B;
+}
+
 .navbar {
     background-color: #fff;
     display: flex;
@@ -81,12 +85,96 @@
     font-weight: bold;
     text-align: center;
     margin: 30px 0;
+}
+
+#main_banner .link-button {
     box-shadow: 1px 1px 20px #00000052;
 }
 
 .link-button:hover {
     text-decoration: none;
     color: #fff;
+}
+
+.google {
+    background: #e0eaf4;
+}
+
+.google .container {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.section-title {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #77797d;
+    margin-bottom: 50px;
+}
+
+#studies > .container > .row > .col-md-6 {
+    padding: 0 20px;
+}
+
+.case-box {
+    background: #fff;
+    box-shadow: 1px 1px 10px #8282822e;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.case-box .col-md-6 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.percentage {
+    color: #006ADC;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.percentage-text {
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.case-description {
+    margin: 20px 0;
+}
+
+.avatar {
+    border-radius: 50%;
+    max-width: 56px;
+    max-height: 56px;
+}
+
+.case-box .avatar {
+    margin-left: 15px;
+}
+
+.case-testimonial {
+    flex-wrap: nowrap;
+}
+
+.case-footer {
+    padding-left: 15px;
+}
+.case-footer strong {
+    color: #000;
 }
 
 @media (min-width: 768px) { 
@@ -96,5 +184,28 @@
 
     .main-subtitle {
         font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 35px;
+    }
+
+    .section-subtile {
+        font-size: 25px;
+    }
+
+    .case-box .col-md-6 {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+ }
+
+ @media (min-width: 992px) {
+    .case-box .col-md-6 {
+        flex-wrap: nowrap;
+    }
+
+    .percentage-text {
+        padding-left: 15px;
     }
  }
