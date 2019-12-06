@@ -34,3 +34,67 @@
     font-weight: 600;
     color: #fff;
 }
+
+#main_banner {
+    background-image: url("https://www.seodirect.org/wp-content/uploads/2018/08/hero_background-seo-direct-v2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    background-attachment: fixed;
+}
+
+#main_banner .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre-title, .main-title, .main-subtitle {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 30px;
+    text-shadow: 0px 4px 11px rgba(0,0,0,0.32);
+    font-weight: 700;
+}
+
+.main-subtitle {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.pre-title {
+    font-size: 16px;
+    margin: 0;
+}
+
+.link-button {
+    text-transform: uppercase;
+    padding: 15px 50px;
+    background: #ffa605;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0;
+    box-shadow: 1px 1px 20px #00000052;
+}
+
+.link-button:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (min-width: 768px) { 
+    .main-title {
+        font-size: 54px;
+    }
+
+    .main-subtitle {
+        font-size: 30px;
+    }
+ }
