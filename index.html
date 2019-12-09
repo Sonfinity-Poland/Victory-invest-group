@@ -752,35 +752,36 @@
 				</div>
 				<div class="col-lg-6">
 						<div class="mailer">
+							<div class="alertbox">Proszę wypełnić wszystkie pola poprawnie!</div>
 							<div class="wrapper">
 								<div class="inner">
-									<label for="">Name</label>
-									<input type="text">
+									<label for="name">Name</label>
+									<input id="name" name="name" type="text">
 								</div>
 								<div class="inner">
-									<label for="">E-Mail</label>
-									<input type="text">
+									<label for="email">E-Mail</label>
+									<input id="email" name="email" type="text">
 								</div>
 							</div>
 							<div class="wrapper">
 								<div class="inner">
-									<label for="">Phone</label>
-									<input type="text">
+									<label for="phone">Phone</label>
+									<input id="phone" name="phone" type="text">
 								</div>
 								<div class="inner">
-									<label for="">Website</label>
-									<input type="text">
+									<label for="website">Website</label>
+									<input id="website" name="website" type="text">
 								</div>
 							</div>
 							<div class="wrapper">
 								<div class="inner">
-									<label for="">Monthly Budget</label>
-									<input type="text">
+									<label for="budget">Monthly Budget</label>
+									<input id="budget" name="budget" type="text">
 								</div>
 								<div class="inner">
 									<label for="">How should we contact you?</label>
 									<div class="checkbox">
-										<input type="checkbox" value="Phone">
+										<input  type="checkbox" value="Phone">
 										<label for="">Phone</label>
 									</div>
 									<div class="checkbox">
@@ -791,11 +792,11 @@
 							</div>
 							<div class="wrapper">
 								<div class="inner textarea">
-									<label for="">Message</label>
-									<textarea name="" id="" cols="30" rows="10"></textarea>
+									<label for="message">Message</label>
+									<textarea name="message" id="message" cols="30" rows="10"></textarea>
 								</div>
 							</div>
-							<button class="link-button">SEND</button>
+							<button id="mail-submit" class="link-button">SEND</button>
 						</div>
 					</div>
 			</div>
@@ -847,7 +848,7 @@
 	
     <script
       type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
+      src="//code.jquery.com/jquery-3.3.1.js"
 	></script>
 	
     <script
@@ -867,5 +868,71 @@
     
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			function telephoneCheck(str) {
+			  var isphone = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g.test(str);
+			  return isphone;
+			};
+
+			function validateEmail(email) {
+			  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			  return re.test(email);
+			};
+
+			function checkFields() {
+			if ( $('#name').val()!='' && $('#email').val()!='' && $('#phone').val()!='' && $('#website').val()!='' && $('#budget').val()!='' && $('#message').val()!='') {
+				if (telephoneCheck($('#phone').val()) && validateEmail($('#email').val())) {
+					return true;
+				} 
+			};
+
+			return false;
+			}
+
+			$('#name, #email, #phone, #website, #budget, #message').on('keyup', function() {
+				if (telephoneCheck($('#phone').val())) {
+					$('#phone').removeClass('error');
+				} else {
+					$('#phone').addClass('error');
+				}
+				if (validateEmail($('#email').val())) {
+					$('#email').removeClass('error');
+				} else {
+					$('#email').addClass('error');
+				}
+			});
+
+			$('#mail-submit').click(function() {
+				var postForm = {
+					'name': $('#name').val(),
+					'email': $('#email').val(),
+					'phone': $('#phone').val(),
+					'budget': $('#budget').val(),
+					'message': $('#message').val(),
+				};
+
+				if (checkFields()) {
+					$.ajax({
+						url: "send.php",
+						type: "post",
+						data: postForm,
+						success: function(response) {
+							if (response) {
+								$('.alertbox').addClass('ok').html('Dziękujemy za wiadomość.');
+							}
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							console.log(textStatus, errorThrown);
+						}
+					});
+				} else {
+					$('.alertbox').show();
+				}
+			})
+
+		});
+	</script>
   </body>
 </html>
