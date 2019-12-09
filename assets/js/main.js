@@ -39,7 +39,9 @@ $( document ).ready(function() {
     }
   }))
 
-  // FORM
+
+  // PHP MAILER
+
 
   function telephoneCheck(str) {
     var isphone = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g.test(str);
@@ -79,6 +81,7 @@ $( document ).ready(function() {
       'name': $('#name').val(),
       'email': $('#email').val(),
       'phone': $('#phone').val(),
+      'website': $('#website').val(),
       'budget': $('#budget').val(),
       'message': $('#message').val(),
     };
@@ -101,6 +104,7 @@ $( document ).ready(function() {
       $('.alertbox').show();
     }
   })
+
 
 });
           
