@@ -234,6 +234,10 @@ section {
     left: -15px;
 }
 
+.slick-arrow {
+    display: none !important;
+}
+
 .google-rating {
     background: #fff;
     box-shadow: 1px 1px 10px #8282822e;
@@ -305,6 +309,29 @@ section {
     line-height: 30px;
 }
 
+.card {
+    border: 0;
+}
+
+.accordion>.card>.card-header {
+    background: transparent;
+}
+
+.card .btn-link {
+    font-weight: 700;
+    color: grey;
+    font-size: 18px;
+}
+
+.card i {
+    margin-right: 15px;
+}
+
+@media (min-width: 576px) { 
+    .slick-arrow {
+        display: block !important;
+    }
+ }
 
 
 @media (min-width: 768px) { 
