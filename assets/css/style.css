@@ -316,6 +316,108 @@ section {
     line-height: 30px;
 }
 
+
+#form {
+    background-image: url("https://www.seodirect.org/wp-content/uploads/2018/08/free-proposal-bg-seo-direct.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#form .section-title {
+    text-transform: unset;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: left;
+    text-shadow: 0px 2px 10px rgba(0,0,0,0.37);
+}
+
+#form p {
+    margin-bottom: 20px;
+    color: #b2d7ff;
+    line-height: 27px;
+    font-size: 18px;
+}
+
+.author-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.founder {
+    width: 150px;
+}
+
+#form .author-box .author-name {
+    margin-bottom: 0 !important;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+#form .author-box p {
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 0px !Important;
+}
+
+.mailer {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 50px 25px;
+    box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.43);
+}
+
+.mailer .wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mailer .inner {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+}
+
+.mailer .textarea {
+    width: 100%;
+}
+
+.mailer label {
+    margin-bottom: 0!important;
+    font-size: 16px;
+    font-weight: 500;
+    color: #031229;
+}
+
+.mailer input, textarea {
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    color: #888a8d;
+    min-height: 40px;
+    padding: 5px 14px;
+    border-radius: 3px;
+}
+
+.mailer .checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.mailer input[type="checkbox"] {
+    min-height: 10px;
+    margin-right: 10px;
+}
+
 .card {
     border: 0;
 }
@@ -375,6 +477,11 @@ footer .fas, footer .far {
  }
 
 
+.mailer .link-button {
+    border: none;
+    width: 100%;
+}
+
 @media (min-width: 768px) { 
     .main-title {
         font-size: 54px;
@@ -419,4 +526,11 @@ footer .fas, footer .far {
     }
     
     
+ }
+
+ @media (max-width: 575px) {
+    .mailer .inner {
+        width: 100%;
+        margin-bottom: 15px;
+    }
  }
