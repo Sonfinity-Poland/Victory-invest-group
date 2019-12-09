@@ -610,11 +610,17 @@ section.blue {
 .keyword-box {
     background: #fff;
     box-shadow: 1px 1px 10px #8282822e;
-    max-width: 400px;
-    padding: 20px;
+    padding: 28px 20px;
     border-radius: 15px;
     font-size: 18px;
     margin: 20px 0;
+}
+
+.box {
+  background: #fff;
+  box-shadow: 1px 1px 10px #8282822e;
+  border-radius: 15px;
+  padding: 30px;
 }
 
 .keyword-box i {
@@ -626,6 +632,8 @@ section.blue {
     background: #fff;
     box-shadow: 1px 1px 10px #8282822e;
     border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
 }
 
 
@@ -637,12 +645,24 @@ section.blue {
 
 .testimonial-box .row {
   margin: 0;
-  padding: 30px;
 }
 
 .person-info {
   margin-left: 20px;
   margin-top: 10px;
+}
+
+.case-numbers .box {
+  display: flex;
+  justify-content: center;
+}
+
+#case-studies .box {
+  margin-top: 20px;
+}
+
+.case-numbers .box .percentage-text {
+  margin-top: 5px;
 }
 
 @media (min-width: 576px) {
