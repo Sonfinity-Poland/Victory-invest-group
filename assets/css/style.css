@@ -197,7 +197,8 @@ section {
   margin-top: 20px;
 }
 
-.client-box .avatar {
+.client-box .avatar,
+#case-studies .avatar {
   max-width: 80px;
   max-height: 80px;
   margin-bottom: 20px;
@@ -575,6 +576,54 @@ section.blue {
     padding: 100px;
 }
 
+.case-logo {
+    margin: 30px auto;
+    display: block;
+    max-width: 200px;
+}
+
+#case-studies h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.keyword-box {
+    background: #fff;
+    box-shadow: 1px 1px 10px #8282822e;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.keyword-box i {
+    color: #0e4f83;
+    margin-right: 10px;
+}
+
+.testimonial-box {
+    background: #fff;
+    box-shadow: 1px 1px 10px #8282822e;
+    border-radius: 15px;
+}
+
+
+.testimonial-name {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+}
+
+.testimonial-box .row {
+  margin: 0;
+  padding: 30px;
+}
+
+.person-info {
+  margin-left: 20px;
+  margin-top: 10px;
+}
 
 @media (min-width: 576px) {
   .slick-arrow {
