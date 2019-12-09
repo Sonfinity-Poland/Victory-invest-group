@@ -38,6 +38,10 @@ p {
   color: #fff;
 }
 
+.logo {
+  max-width: 200px;
+}
+
 #main_banner {
   background-image: url("https://www.seodirect.org/wp-content/uploads/2018/08/hero_background-seo-direct-v2.png");
   background-repeat: no-repeat;
@@ -744,6 +748,11 @@ section.blue {
     text-align: left;
 }
 
+ 
+.contact-paragraphs {
+  padding-right: 150px;
+}
+
 
 
 }
@@ -772,4 +781,7 @@ section.blue {
   #copyrights .terms:after {
     content: unset;
   }
+
+
+
 }
