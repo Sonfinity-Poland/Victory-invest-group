@@ -234,6 +234,10 @@ section {
     left: -15px;
 }
 
+.slick-arrow {
+    display: none !important;
+}
+
 .google-rating {
     background: #fff;
     box-shadow: 1px 1px 10px #8282822e;
@@ -245,8 +249,15 @@ section {
     padding: 10px;
 }
 
+.google-rating a {
+    font-size: 15px;
+    color: #616B7B;
+}
+
 .google-rating .stars {
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .rating {
@@ -304,6 +315,7 @@ section {
     margin-bottom: 40px;
     line-height: 30px;
 }
+
 
 #form {
     background-image: url("https://www.seodirect.org/wp-content/uploads/2018/08/free-proposal-bg-seo-direct.jpg");
@@ -406,6 +418,65 @@ section {
     margin-right: 10px;
 }
 
+.card {
+    border: 0;
+}
+
+.accordion>.card>.card-header {
+    background: transparent;
+}
+
+.card .btn-link {
+    font-weight: 700;
+    color: grey;
+    font-size: 18px;
+}
+
+.card i {
+    margin-right: 15px;
+}
+
+footer {
+    padding: 50px 0;
+}
+
+footer .col-md-6 .row {
+    flex-wrap: nowrap;
+}
+
+footer .col-md-6 {
+    margin-top: 50px;
+}
+
+.footer-column-heading {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.footer-social {
+    font-size: 24px;
+    color: #006adc;
+}
+
+.footer-social a {
+    margin: 0 15px;
+}
+
+footer .fas, footer .far {
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: #006adc;
+}
+
+
+@media (min-width: 576px) { 
+    .slick-arrow {
+        display: block !important;
+    }
+ }
+
+
 .mailer .link-button {
     border: none;
     width: 100%;
@@ -449,6 +520,11 @@ section {
         justify-content: center;
         flex-direction: column;
     }
+
+    footer .col-md-6 {
+        margin-top: 0;
+    }
+    
     
  }
 
