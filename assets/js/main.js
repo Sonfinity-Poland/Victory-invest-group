@@ -39,6 +39,70 @@ $( document ).ready(function() {
     }
   }))
 
+  // PHP MAILER
+
+  function telephoneCheck(str) {
+    var isphone = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g.test(str);
+    return isphone;
+  };
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  };
+
+  function checkFields() {
+  if ( $('#name').val()!='' && $('#email').val()!='' && $('#phone').val()!='' && $('#website').val()!='' && $('#budget').val()!='' && $('#message').val()!='') {
+    if (telephoneCheck($('#phone').val()) && validateEmail($('#email').val())) {
+      return true;
+    } 
+  };
+
+  return false;
+  }
+
+  $('#name, #email, #phone, #website, #budget, #message').on('keyup', function() {
+    if (telephoneCheck($('#phone').val())) {
+      $('#phone').removeClass('error');
+    } else {
+      $('#phone').addClass('error');
+    }
+    if (validateEmail($('#email').val())) {
+      $('#email').removeClass('error');
+    } else {
+      $('#email').addClass('error');
+    }
+  });
+
+  $('#mail-submit').click(function() {
+    var postForm = {
+      'name': $('#name').val(),
+      'email': $('#email').val(),
+      'phone': $('#phone').val(),
+      'website': $('#website').val(),
+      'budget': $('#budget').val(),
+      'message': $('#message').val(),
+    };
+
+    if (checkFields()) {
+      $.ajax({
+        url: "send.php",
+        type: "post",
+        data: postForm,
+        success: function(response) {
+          if (response) {
+            $('.alertbox').addClass('ok').html('Dziękujemy za wiadomość.');
+          }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.log(textStatus, errorThrown);
+        }
+      });
+    } else {
+      $('.alertbox').show();
+    }
+  })
+
 
 });
           
