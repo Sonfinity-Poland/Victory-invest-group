@@ -194,11 +194,12 @@ section {
   flex-direction: column;
   background: #fff;
   border-radius: 15px;
-  padding: 20px;
-  justify-content: center;
+  padding: 50px 20px;
+  justify-content: flex-start;
   align-items: center;
   box-shadow: 1px 1px 10px #8282822e;
   margin-top: 20px;
+  min-height: 600px;
 }
 
 .client-box .avatar,
