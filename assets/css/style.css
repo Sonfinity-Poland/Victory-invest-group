@@ -435,6 +435,8 @@ textarea {
   font-weight: 700;
   color: grey;
   font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .card i {
