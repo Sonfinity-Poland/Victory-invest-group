@@ -307,6 +307,7 @@ section {
   border-radius: 4px;
   text-align: center;
   margin-bottom: 30px;
+  min-height: 420px;
 }
 
 .features-box .box-title {
@@ -749,14 +750,9 @@ section.blue {
     flex-direction: row;
     text-align: left;
 }
-
- 
-.contact-paragraphs {
-  padding-right: 150px;
-}
-
-
-
+  .contact-paragraphs {
+    padding-right: 150px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -783,7 +779,10 @@ section.blue {
   #copyrights .terms:after {
     content: unset;
   }
+}
 
-
-
+@media (max-width: 1199px) and (min-width: 992px) {
+  .features-box {
+    min-height: 480px;
+  }
 }
