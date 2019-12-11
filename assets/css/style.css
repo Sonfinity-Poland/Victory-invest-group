@@ -31,6 +31,10 @@ p {
   border-radius: 5px;
 }
 
+.poland-flag {
+  margin-left: 20px;
+}
+
 .navbar .call a {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -140,6 +144,10 @@ section {
   padding: 30px;
   border-radius: 15px;
   margin-top: 20px;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .case-box .col-md-6 {
@@ -303,11 +311,11 @@ section {
 .features-box {
   background-color: #fff;
   box-shadow: 0px 8px 24px 0px rgba(4, 43, 113, 0.11);
-  padding: 45px 25px;
+  padding: 45px 25px 0 25px;
   border-radius: 4px;
   text-align: center;
   margin-bottom: 30px;
-  min-height: 420px;
+  min-height: 380px;
 }
 
 .features-box .box-title {
@@ -329,6 +337,12 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+
+#form .col-lg-6:first-child {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #form .section-title {
@@ -355,6 +369,9 @@ section {
 
 .founder {
   width: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-right: 15px;
 }
 
 #form .author-box .author-name {
@@ -375,7 +392,7 @@ section {
 .mailer {
   background-color: #fff;
   border-radius: 8px;
-  padding: 50px 25px;
+  padding: 50px 25px 0 25px;
   box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.43);
 }
 
@@ -438,6 +455,7 @@ textarea {
   color: grey;
   font-size: 18px;
   display: flex;
+  align-items: baseline;
   justify-content: flex-start;
 }
 
@@ -452,18 +470,19 @@ footer {
 .footer-logo {
   display: block;
   margin: 0 auto;
+  width: 300px;
 }
 
-footer .col-md-6 .row {
+footer .col-lg-4 .row {
   flex-wrap: nowrap;
-  justify-content: center;
 }
 
-footer .col-md-6 {
+footer .col-lg-4 {
   margin-top: 50px;
 }
 
 .footer-column-heading {
+  text-align: left!important;
   text-transform: uppercase;
   font-size: 18px;
   text-align: center;
@@ -559,7 +578,7 @@ footer .far {
 
 .alertbox.ok {
 	border: green;
-    display: block;
+  display: block;
 }
 
 .breadcrumbs {
@@ -705,14 +724,6 @@ section.blue {
     flex-direction: row;
   }
 
-  .footer-logo {
-    margin: 0;
-  }
-
-  .footer-column-heading {
-    text-align: left;
-  }
-
   .footer-social {
     justify-content: flex-start;
   }
@@ -779,10 +790,33 @@ section.blue {
   #copyrights .terms:after {
     content: unset;
   }
+
+  .footer-logo {
+    margin: 0 auto;
+  }
+
+  .footer-column-heading {
+    text-align: center!important;
+  }
+
+  footer .col-lg-4 .row {
+    justify-content: center;
+  }
+
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
   .features-box {
-    min-height: 480px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 375px) {
+  footer .col-lg-4 .row {
+    flex-wrap: wrap;
+  }
+
+  footer .col-lg-4 .row p {
+    text-align: center;
   }
 }
