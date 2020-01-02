@@ -5,11 +5,11 @@
 #1.
 
 - Index.html zmieniasz na index.php, następnie w tym pliku na samej górze przed znacznikiem <html> dodajesz
-  ```
+ ```
   <?php
     include "config.php"
   ?>
-  
+```
 - W głównym folderze tworzysz plik config.php
 ``` <?php
     session_start();
@@ -26,5 +26,17 @@
 
     require_once "assets/lang/".$_SESSION['lang'].".php";
 ?>
+```
+
+#2.
+
+- W folderze assets tworzysz folder "lang". Następnie tworzysz w nim 2 pliki -> pl.php i en.php
+
+```
+  <?php
+    $lang = array();
+    
+    $lang["NAZWA_ZMIENNEJ"] = "TREŚC ZMIENNEJ";
+np. $lang["navbar_homepage"] = "STRONA GŁÓWNA";
 ```
 
