@@ -4,13 +4,13 @@
 
 #1.
 
-- Index.html zmieniasz na index.php, następnie w tym pliku na samej górze przed znacznikiem <html> dodajesz
+- **Index.html** zmieniasz na **index.php**, następnie w tym pliku na samej górze przed znacznikiem <html> dodajesz
  ```
   <?php
     include "config.php";
   ?>
 ```
-- W głównym folderze tworzysz plik config.php
+- W głównym folderze tworzysz plik **config.php**
 ``` 
  <?php
     session_start();
@@ -31,7 +31,7 @@
 
 #2.
 
-- W folderze assets tworzysz folder "lang". Następnie tworzysz w nim 2 pliki -> pl.php i en.php
+- W folderze assets tworzysz folder **"lang"**. Następnie tworzysz w nim 2 pliki -> pl.php i en.php
 
 ```
   <?php
