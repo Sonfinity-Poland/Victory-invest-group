@@ -1,7 +1,7 @@
 
 ## 1. Zmiana rozszerzenia i dołączenie pliku config.php
 
-- **Index.html** zmieniasz na **index.php**, następnie w tym pliku na samej górze przed znacznikiem <html> dodajesz
+- **Index.html** zmieniasz na **index.php**, następnie w tym pliku na samej górze przed znacznikiem html dodajesz
  ```
   <?php
     include "config.php";
