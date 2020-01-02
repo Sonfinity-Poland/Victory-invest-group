@@ -2,7 +2,7 @@
 
 <a href="https://sonfinity-poland.github.io/Victory-invest-group/">See demo</a>
 
-#1.
+###1. Zmiana rozszerzenia i dołączenie pliku config.php
 
 - **Index.html** zmieniasz na **index.php**, następnie w tym pliku na samej górze przed znacznikiem <html> dodajesz
  ```
@@ -29,9 +29,9 @@
 ?>
 ```
 
-#2.
+###2. Utworzenie tablicy ze zmiennymi
 
-- W folderze assets tworzysz folder **"lang"**. Następnie tworzysz w nim 2 pliki -> pl.php i en.php
+- W folderze assets tworzysz folder **"lang"**. Następnie tworzysz w nim 2 pliki -> **pl.php** i **en.php**
 
 ```
   <?php
@@ -42,9 +42,9 @@
  ?>
 ```
 
-#3.
+###3. Implementacja zmiennych z tablicy w index.php
 
-- Każdą zmienną zastępujemy text w pliku index.php, który chcemy tłumaczyć
+- Każdą zmienną zastępujemy tekst w pliku index.php, który chcemy tłumaczyć
 
 ```
   <nav>
@@ -56,9 +56,9 @@
 ```
 Posępujemy tak w przypadku każdego tekstu jaki chcemy zmienić, gdy juz skończysz uzupełniać zmienne w pl.php kopiujesz wszystko do en.php i po prostu pod zmienne podstawiasz nazwę tłumaczoną na angielki.
 
-#4.
+###4. Podpięcie przycisków zmieniających sesje
 
-- Ostatnim etapem jest podpięcie pod przyciski odpowiedniej ścieżki do zmiany języka (w href dodajemy "?lang=pl" oraz "?lang-en")
+- Ostatnim etapem jest podpięcie pod przyciski odpowiedniej ścieżki do zmiany języka (w href dodajemy **"?lang=pl"** oraz **"?lang-en"**)
 
 ```
 
