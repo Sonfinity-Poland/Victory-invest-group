@@ -1,5 +1,9 @@
+<?php 
+  include "config.php";
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -30,7 +34,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg indigo">
           <div class="logo_holder">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="assets/images/logo.png" alt="" class="img-fluid logo" />
             </a>   
           </div>
@@ -48,24 +52,24 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
               <li class="nav-item active">
-                <a class="nav-link" href="servicesPL.html">USŁUGI</a>
+                <a class="nav-link" href="services.php"><?php echo $lang['services'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="our-resultsPL.html">NASZA PRACA</a>
+                <a class="nav-link" href="our-results.php"><?php echo $lang['results'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="why-usPL.html">DLACZEGO MY</a>
+                <a class="nav-link" href="why-us.php"><?php echo $lang['why_us'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contactPL.html">KONTAKT</a>
+                <a class="nav-link" href="contact.php"><?php echo $lang['contact'] ?></a>
               </li>
               <li class="nav-item">
-                <a href="index.html" class="poland-flag">
+                <a href="index.php?lang=pl" class="poland-flag">
                   <img src="assets/images/poland.png" alt="">
                 </a>
               </li>
               <li class="nav-item">
-                <a href="indexPL.html" class="poland-flag">
+                <a href="index.php?lang=en" class="poland-flag">
                   <img src="assets/images/united-kingdom.png" alt="">
                 </a>
               </li>
@@ -77,20 +81,20 @@
     <section id="main_banner">
       <div class="container">
         <h1 class="main-title">
-          AGENCJA MARKETINGU INTERNETOWEGO <br />
-          NASTAWIENI NA WYNIKI
+          <?php echo $lang['main_title_first'] ?><br />
+          <?php echo $lang['main_title_second'] ?>
         </h1>
         <h2 class="main-subtitle">
-            ZAJMUJEMY SIĘ SEO, PPC, DESIGNEM I SOCIAL MEDIA
+          <?php echo $lang['mian_subtitle'] ?>
         </h2>
-        <a href="contactPL.html" class="link-button">Napisz do nas!</a>
+        <a href="contact.php" class="link-button"><?php echo $lang['banner_button'] ?></a>
       </div>
     </section>
     <section id="studies">
       <div class="container">
-        <h2 class="section-title">Nasza praca</h2>
+        <h2 class="section-title"><?php echo $lang['results_title'] ?></h2>
         <p class="section-subtitle">
-            Mały postęp każdego dnia sumuje się do wielkich rezultatów!
+          <?php echo $lang['results_subtitle'] ?>
         </p>
         <div class="row">
           <div class="col-md-6">
@@ -103,17 +107,15 @@
               <div class="row case-numbers">
                 <div class="col-md-6">
                   <span class="percentage">630%</span>
-                  <span class="percentage-text">Przyrost ruchu organicznego</span>
+                  <span class="percentage-text"><?php echo $lang['results_percentage_first'] ?></span>
                 </div>
                 <div class="col-md-6">
                   <span class="percentage">320%</span>
-                  <span class="percentage-text">Przyrost klientów online</span>
+                  <span class="percentage-text"><?php echo $lang['results_percentage_second'] ?></span>
                 </div>
               </div>
               <p class="case-description">
-                “Moja współpraca z Victory Invest Group przyniosła niesamowite efekty! 
-                Wiedza Victory Invest Group z zakresu SEO w połączeniu z indywidualnym podejściem do klienta i 
-                jego projektów zdecydowanie wyróżnia tę firmę na tle konkurencji.”
+                <?php echo $lang['results_text_first'] ?>
               </p>
               <div class="row case-testimonial">
                 <img
@@ -123,7 +125,7 @@
                 />
                 <p class="case-footer">
                   <strong>James Kern</strong><br />
-                  WŁAŚCICIEL FIRMY Z BRANŻY MARKETINGU SMS
+                  <?php echo $lang['results_job_first'] ?>
                 </p>
               </div>
             </div>
@@ -138,15 +140,15 @@
               <div class="row case-numbers">
                 <div class="col-md-6">
                   <span class="percentage">120%</span>
-                  <span class="percentage-text">Przyrost ruchu organicznego</span>
+                  <span class="percentage-text"><?php echo $lang['results_percentage_first'] ?></span>
                 </div>
                 <div class="col-md-6">
                   <span class="percentage">85%</span>
-                  <span class="percentage-text">Przyrost klientów onlinne</span>
+                  <span class="percentage-text"><?php echo $lang['results_percentage_second'] ?></span>
                 </div>
               </div>
               <p class="case-description">
-                "W pewnym sensie inwestowanie w nowe usługi SEO wymaga sporego zaufania. Dzieje się tak, bo optymalizacja SEO zajmuje dużo czasu i wykładając na to swoje pieniądze musisz czekać na pierwsze rezultaty nawet kilka miesięcy, o ile je w ogóle dostrzeżesz. Dlatego przy tylu dostępnych dostawcach usług SEO na rynku naprawdę trudno jest wybrać odpowiednią firmę(...)"
+                <?php echo $lang['results_text_second'] ?>
               </p>
               <div class="row case-testimonial">
                 <img
@@ -156,7 +158,7 @@
                 />
                 <p class="case-footer">
                   <strong>Jensen Lee</strong><br />
-                  WŁAŚCICIEL FIRMY I BRANŻY E-COMMERCE
+                  <?php echo $lang['results_job_second'] ?>
                 </p>
               </div>
             </div>
@@ -166,9 +168,9 @@
     </section>
     <section id="about" class="section-grey">
       <div class="container">
-        <h2 class="section-title">Co mówią o nas nasi klienci?</h2>
+        <h2 class="section-title"><?php echo $lang['about_title'] ?></h2>
         <p class="section-subtitle">
-            Renoma naszych klientów to nasza renoma!
+          <?php echo $lang['about_subtitle'] ?>
         </p>
         <div class="row slider autoplay">
           <div class="col-lg-4 col-sm-12">
@@ -179,7 +181,7 @@
                 class="img-responsive avatar"
               />
               <p><strong>Joel Portillo</strong></p>
-              <p>WŁAŚCICIEL FIRMY</p>
+              <p><?php echo $lang['joel_job'] ?></p>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -188,7 +190,7 @@
                 <i class="fas fa-star"></i>
               </div>
               <p class="client-description">
-                "Ryan i jego zespół wykonali niesamowitą pracę optymalizując moją stronę internetową, aby wygenerować więcej potencjalnych klientów i poprawić moją widoczność w sieci. Poprzez marketing organiczny pokonaliśmy naszą konkurencję i znaleźliśmy się na pierwszym miejscu w wyszukiwarkach Google, Yahoo i Bing. Gorąco polecam usługi Victory Invest Group zarówno w zakresie marketingu internetowego jak i SEO!"					
+                <?php echo $lang['joel_description'] ?>			  	
               </p>
             </div>
           </div>
@@ -200,7 +202,7 @@
                 class="img-responsive avatar"
               />
               <p><strong>Matt Schreiber</strong></p>
-              <p>WŁAŚCICIEL SPA MEDYCZNEGO</p>
+              <p><?php echo $lang['matt_job'] ?></p>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -209,7 +211,7 @@
                 <i class="fas fa-star"></i>
               </div>
               <p class="client-description">
-                "Moje doświadczenia z Ryanem i Victory Invest Group są tylko pozytywne. Ryan jest zawsze dostępny i wykonuje dla mojej firmy znakomitą pracę jeśli chodzi o potrzeby reklamowe i marketing onlline! Ma ogromny wpływ na naszą działalność i pozwala nam się rozrastać!"					
+                <?php echo $lang['matt_description'] ?>					
               </p>
             </div>
           </div>
@@ -221,7 +223,7 @@
                 class="img-responsive avatar"
               />
               <p><strong>Harley Di Nardo</strong></p>
-              <p>WŁAŚCICIEL SALONU</p>
+              <p><?php echo $lang['harley_job'] ?></p>
               <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -230,7 +232,7 @@
                 <i class="fas fa-star"></i>
               </div>
               <p class="client-description">
-                "Ryan jest bardzo pracowity. To ujmjący, pełen szacunku facet, który dotrzymuje obietnic. Nie wciska kitu i to mi się podoba. Kiedy po raz pierwszy rozmawialiśmy przez telefon, wiedziałem, że to odpowiedni człowiek do prowadzenia kampanii SEO mojego salonu. Dzięki niemu nasza firma rozrosła się w rekordowym tempie. Gorąco polecam!"	
+                <?php echo $lang['harley_description'] ?>	
               </p>
             </div>
           </div>
@@ -243,7 +245,7 @@
                 />
                 
                 <p><strong>Hart Levin</strong></p>
-                <p>PRAWNIK</p>
+                <p><?php echo $lang['hart_job'] ?></p>
 
 
                 <div class="stars">
@@ -254,7 +256,7 @@
                   <i class="fas fa-star"></i>
                 </div>
                 <p class="client-description">
-                  “Ryan to gwiazda! Jest zawsze dyspozycyjny i uprzejmy. Jego praca przynosi widoczne rezultaty. Współpracowałem z wieloma osobami w jego dziedzinie i jego umiejętności przewyższają je wszystkie. DAJĘ 10 GWIAZDEK!!!”	
+                  <?php echo $lang['hart_description'] ?>	
                 </p>
               </div>
             </div>
@@ -267,7 +269,7 @@
                   class="img-responsive avatar"
                 />
                 <p><strong>TOM WERZ</strong></p>
-                <p>WŁAŚCICIEL SPA MEDYCZNEGO</p>
+                <p><?php echo $lang['tom_job'] ?></p>
 
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -277,7 +279,7 @@
                   <i class="fas fa-star"></i>
                 </div>
                 <p class="client-description">
-                  “Victory Invest Group od początku wydawała nam się idealna. Mogliśmy zaufać, że dobrze wykonają swoją pracę. W tej branży trudno jest ustalić, czy korzystasz z usług właściwej firmy. Osiągnęliśmy jednak świetne wyniki, a Ryan pomógł nam w zbudowaniu wiarygodności!”		
+                  <?php echo $lang['tom_description'] ?>		
                 </p>
               </div>
             </div>
@@ -290,7 +292,7 @@
                 />
 
                 <p><strong>Jensen Lee</strong></p>
-                <p>WŁAŚCICIEL FIRMY E-COMMERCE</p>
+                <p><?php echo $lang['jensen_job'] ?></p>
                 <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -299,7 +301,7 @@
                   <i class="fas fa-star"></i>
                 </div>
                 <p class="client-description">
-                    “Z Victory Invest Group zrobiłem skok w przód. W ciągu kilku krótkich miesięcy nasze wyniki przerosły moje oczekiwanina. Zajmujemy pierwsze miejsce w rankingach słów kluczowych w naszej branży. Jesteśmy na samym szczycie wyników wyszukiwania! Wyprzedzamy ogromne witryny, take jak Home Depot, Amazon i Costco, co według naszej poprzedniej agencji SEO było niemożliwe. ”					
+                  <?php echo $lang['jensen_description'] ?>					
                 </p>
               </div>
             </div>
@@ -311,7 +313,7 @@
                     class="img-responsive avatar"
                   />
                   <p><strong>Joseph Farzam</strong></p>
-                  <p>PRAWNIK</p>
+                  <p><?php echo $lang['joseph_job'] ?>	</p>
                   <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -320,7 +322,7 @@
                     <i class="fas fa-star"></i>
                   </div>
                   <p class="client-description">
-                    "Przez lata wydałem tysiące dolarów na tzw. "ekspertów" SEO, którzy obiecywali złote góry. Victory Invest Group to jedyna firma, która faktycznie była w stanie osiągnąć oczekiwane wyniki i zrobiła to w rozsądnej cenie i rozsądnym czasie. Gorąco polecam ich usługi każdemu - oczywiście z wyjątkiem mojej konkurecji..."	
+                    <?php echo $lang['joseph_description'] ?>
                   </p>
                 </div>
               </div>
@@ -332,7 +334,7 @@
                     class="img-responsive avatar"
                   />
                   <p><strong>Donna Mills</strong></p>
-                  <p>DYREKTOR MARKETINGU</p>
+                  <p><?php echo $lang['donna_job'] ?></p>
                   <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -341,7 +343,7 @@
                     <i class="fas fa-star"></i>
                   </div>
                   <p class="client-description">
-                    "Victory Invest Group zatrudniłam w celu poprawy wyników wyszukiwania strony internetowej jednego z moich klientów. Rezultaty przerosły moje oczekiwania. Firma pomogła nam dotrzeć na pierwszą pozycję w zakresie słów kluczowych, których nawet się nie spodziewaliśmy! Szczególnie miło obserwowało się cierpliwość i zaangażowanie Ryana w naszej wspólnej podróży. Osobiście polecam!"					
+                    <?php echo $lang['donna_description'] ?>					
                   </p>
                 </div>
               </div>
@@ -353,7 +355,7 @@
                     class="img-responsive avatar"
                   />
                   <p><strong>Taylor Hunter</strong></p>
-                  <p>MIĘDZYNARODOWA FIRMA OCHRONIARSKA</p>
+                  <p><?php echo $lang['taylor_job'] ?></p>
                   <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -362,9 +364,7 @@
                     <i class="fas fa-star"></i>
                   </div>
                   <p class="client-description">
-                    “Nie mogłem być bardziej zadowolony z usług Victory Invest Group. Ryan jest liderem w swojej 
-                    dziedzinie i doskonale rozumie branżę. Udzielił mi fantastycznych porad i pomógł zbudować mojej 
-                    firmie dwie nowe strony internetowe, jednocześnie optymalizując nasze SEO. Dzięki temu jesteśmy w Google na szczycie.”		
+                    <?php echo $lang['taylor_description'] ?>		
                   </p>
                 </div>
               </div>
@@ -376,7 +376,7 @@
                     class="img-responsive avatar"
                   />
                   <p><strong>Jessica Kienzl</strong></p>
-                  <p>MANAGER OPERACYJNY</p>
+                  <p><?php echo $lang['jessica_job'] ?></p>
                   <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -385,7 +385,7 @@
                     <i class="fas fa-star"></i>
                   </div>
                   <p class="client-description">
-                    “Zatrudnienie Victory Invest Group spowodowało wymierny wzrost liczby naszych potencjalnych klientów wśród osób przeglądających Internet. Praca z Ryanem jest bardzo przyjemna, jest zawsze dostępny do pomocy. Naprawdę pomógł nam zaoptymalizować nasze SEO i PPC, dzięki czemu zaoszczędziliśmy pieniądze i zmaksymalizowaliśmy zwrot z inwestycji.”									
+                    <?php echo $lang['jessica_description'] ?>								
                   </p>
                 </div>
               </div>
@@ -397,7 +397,7 @@
                     class="img-responsive avatar"
                   />
                   <p><strong>Dan Bassett</strong></p>
-                  <p>WŁAŚCICIEL FIRMY</p>
+                  <p><?php echo $lang['dan_job'] ?></p>
                   <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -406,7 +406,7 @@
                     <i class="fas fa-star"></i>
                   </div>
                   <p class="client-description">
-                    “Wspólnie z Victory Invest Group osiągnęliśmy świetne wyniki. Elastyczność w komunikacji, wysoka wiedza i umiejętności firmy uczyniły naszą współpracę bardzo owocną. Niełatwo znaleźć wysokiej jakości dostawcę usług SEO. Nasza współpraca jest na pewno długoterminowa, bo Victory Invest Group to ludzie, którym można zaufać dzięki ich przejrzystości i wiarygodności.”								
+                    <?php echo $lang['dan_description'] ?>								
                   </p>
                 </div>
               </div>
@@ -416,9 +416,9 @@
 
     <section id="features">
       <div class="container">
-		<h2 class="pre-title">Najlepiej oceniana</h2>
-		<h2 class="section-title">agencja SEO w Warszawie</h2>
-		<p class="section-subtitle">Profesjonalne usługi SEO, które zwiększą twoje przychody i widoczność w sieci</p>
+		<h2 class="pre-title"><?php echo $lang['features_pretitle'] ?></h2>
+		<h2 class="section-title"><?php echo $lang['features_title'] ?></h2>
+		<p class="section-subtitle"><?php echo $lang['features_subtitle'] ?></p>
 		<div class="row">
 			<div class="col-lg-3 col-md-6">
 				<div class="features-box">
@@ -426,8 +426,8 @@
 						src="https://www.seodirect.org/wp-content/uploads/2018/08/place-optimization-seo-direct.svg" 
 						alt=""
 					>
-					<p class="box-title"><strong>KAMPANIE LOKALNE</strong></p>
-					<p>Usługi SEO poświęcone małym i średnim przedsiębiorstwom pomagające rozwinąć skrzydła na rynku lokalnym.</p>
+					<p class="box-title"><strong><?php echo $lang['box_title_first'] ?></strong></p>
+					<p><?php echo $lang['box_text_first'] ?></p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
@@ -436,8 +436,8 @@
 						src="https://www.seodirect.org/wp-content/uploads/2018/08/global-search-seo-direct.svg" 
 						alt=""
 					>
-					<p class="box-title"><strong>KAMPANIE KRAJOWE</strong></p>
-					<p>Kampanie SEO o zasięgu krajowym dla firm, których celem jest maksymalizacja zasięgów w sieci.</p>
+					<p class="box-title"><strong><?php echo $lang['box_title_second'] ?></strong></p>
+					<p><?php echo $lang['box_text_second'] ?></p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
@@ -446,8 +446,8 @@
 						src="https://www.seodirect.org/wp-content/uploads/2018/08/e-commerce-seo-direct.svg" 
 						alt=""
 					>
-					<p class="box-title"><strong>Ecommerce SEO</strong></p>
-					<p>Ekspercka, techniczna optymalizacja SEO na najwyższym poziomie dla klientów z branży eCommerce.</p>
+					<p class="box-title"><strong><?php echo $lang['box_title_third'] ?></strong></p>
+					<p><?php echo $lang['box_text_third'] ?></p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
@@ -456,8 +456,8 @@
 						src="https://www.seodirect.org/wp-content/uploads/2018/08/directory-submission.svg" 
 						alt=""
 					>
-					<p class="box-title"><strong>AUDYTY SEO</strong></p>
-					<p>Świadczymy usługi profesjonalnych audytów SEO. Wskażemy co usprawnić, aby zwiększyć zasięgi twojej strony internetowej.</p>
+					<p class="box-title"><strong><?php echo $lang['box_title_fourth'] ?></strong></p>
+					<p><?php echo $lang['box_text_fourth'] ?></p>
 				</div>
 			</div>
 		</div>
@@ -465,7 +465,7 @@
     </section>
     <section id="faq"  class="section-grey">
       <div class="container">
-        <h2 class="section-title mb-5">NAJCZĘŚCIEJ ZADAWANE PYTANIA</h2>
+        <h2 class="section-title mb-5"><?php echo $lang['faq_title'] ?></h2>
         <div class="row">
           <div class="col-md-6">
               <div class="accordion" id="accordionExample">
@@ -474,14 +474,14 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <i class="fas fa-plus"></i>
-                            Kiedy zobaczę pierwsze efekty kampanii SEO?
+                            <?php echo $lang['faq_1_title'] ?>
                         </button>
                       </h2>
                     </div>
                 
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                       <div class="card-body">
-                        Wyniki mogą różnić się w zależności od wielu czynników. Zazwyczaj widzimy mierzalną różnicę w ruchu organicznym w ciągu pierwszych 2-3 miesięcy od rozpoczęcia naszego wstępnego audytu witryny i działań związanych z budowaniem linków. Strony nowe, podlegające karom lub rywalizujące na bardzo konkurencyjnych rynkach wymagają więcej czasu na zbudowanie ich pozycji w wynikach wyszukiwania. Należy pamiętać, że SEO to przede wszystkim inwestycja długoterminowa. 
+                        <?php echo $lang['faq_1_text'] ?>
                       </div>
                     </div>
                   </div>
@@ -490,13 +490,13 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           <i class="fas fa-plus"></i>
-                          Ile kosztuje kampania SEO?
+                          <?php echo $lang['faq_2_title'] ?>
                         </button>
                       </h2>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                       <div class="card-body">
-                        Miesięczny koszt kampanii jest ściśle związany z tym ile pracy zajmie osiągnięcie zamierzonych celów. Niezależnie od tego czy chodzi o kampanię lokalną, krajową czy eCommerce - wiele czynników wpływa na cenę. To m.in. rynek, na którym konkurujesz, co chcesz osiągnąć czy poziom rozbudowania twojej strony.
+                        <?php echo $lang['faq_2_text'] ?>
                       </div>
                     </div>
                   </div>
@@ -505,13 +505,13 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                           <i class="fas fa-plus"></i>
-                          Skąd mam wiedzieć której agencji SEO zaufać?
+                          <?php echo $lang['faq_3_title'] ?>
                         </button>
                       </h2>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                       <div class="card-body">
-                        Wybór agencji SEO nie jest łatwym zadaniem. Pamiętaj, że w biznesie nie ma nic ważniejszego niż reputacja. Przeczytaj opinie w Internecie i upewnij się, że zamieszczone komentarze wyglądają wiarygodnie. Ponadto sprawdź którą pozycję w rankingach Google zajmuje agencja, która cię interesuje, kiedy wyszukujesz słów kluczowych związanych z usługami SEO. W końcu jeżeli ma poprawić widoczność w siecie twojej sitryny, to powinna potrafić wypozycjonować też swoją!
+                        <?php echo $lang['faq_3_text'] ?>
                       </div>
                     </div>
                   </div>
@@ -520,13 +520,13 @@
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
                               <i class="fas fa-plus"></i>
-                              Jaki jest minimalny okres nawiązanina współpracy?
+                              <?php echo $lang['faq_4_title'] ?>
                           </button>
                         </h2>
                       </div>
                       <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
-                            Nie ograniczamy naszych klientów długoterminowymi umowami. Nasza współpraca jest przedłużana z miesiąca na miesiąc. Chcemy zatrzymywać naszych partnerów wysoką jakością pracy i uważamy, że powinni mieć pełną swobodę.
+                          <?php echo $lang['faq_4_text'] ?>
                         </div>
                       </div>
                     </div>
@@ -535,13 +535,13 @@
                           <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
                                 <i class="fas fa-plus"></i>
-                                Dlaczego moja pozycja w Google się zmienia?
+                                <?php echo $lang['faq_5_title'] ?>
                             </button>
                           </h2>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                           <div class="card-body">
-                            Nie ma możliwości, aby zatrzymać pewne wahania w rankingach wyników Google. To część działania algorytmów Google. Z czasem twoja pozycja wyrówna się i sam zauważysz, że jest coraz silniejsza.
+                            <?php echo $lang['faq_5_text'] ?>
                           </div>
                         </div>
                       </div>
@@ -554,14 +554,14 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                             <i class="fas fa-plus"></i>
-                            Jak wygląda proces kampanii SEO?
+                            <?php echo $lang['faq_6_title'] ?>
                         </button>
                       </h2>
                     </div>
                 
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                       <div class="card-body">
-                        Zaczynamy od przeprowadzenia audytu, który wykaże co należy poprawić w twojej witrynie internetowej. Chcemy mieć pewność, że uzyskamy jak najlepsze indeksowanie, a algorytmy Google w żaden sposób nie dewaluują witryny. Po zakończeniu audytu rozpoczyna się proces optymalizacji strony pod kątem docelowych słów kluczowych i wyrażeń. Następny etap to wzmacnianie pozycji witryny poprzez naszą ręczną pracę nad budowaniem linków.
+                        <?php echo $lang['faq_6_text'] ?>
                       </div>
                     </div>
                   </div>
@@ -570,13 +570,13 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                             <i class="fas fa-plus"></i>
-                            Czym są linki zwrotne i dlaczego są tak ważne?
+                            <?php echo $lang['faq_7_title'] ?>
                         </button>
                       </h2>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                       <div class="card-body">
-                        Przykładem linku zwrotnego jest sytuacja, w której jedna strona łączy się z inną, co zasadniczo wpływa na jej poziom aufania. Linki zwrotne są siłą napędową SEO i najważniejszą częścią algorytmów rankingowych Google. Im więcej wysokiej jakości połączeń twojej witryny, tym lepsza będzie twoja pozycja w wynikach wyszukiwania - pod warunkiem, że wszystko zostało wykonane poprawnie. Tworzenie linków powinno być przeprowadzone delikatnie i wyłącznine przez specjalistów w dziedzinie SEO.
+                        <?php echo $lang['faq_7_text'] ?>
                       </div>
                     </div>
                   </div>
@@ -585,13 +585,13 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                             <i class="fas fa-plus"></i>
-                            Czy zawszę muszę prowadzić kampanie SEO?
+                            <?php echo $lang['faq_8_title'] ?>
                         </button>
                       </h2>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                       <div class="card-body">
-                        Uzyskasz dostęp do indywidualnego panelu kontrolnego, który pozwoli ci na bieżąco, w jednym miejscu, obserwować pozycję twoich słów kluczowych, ruch i rozwój social mediów.
+                        <?php echo $lang['faq_8_text'] ?>
                       </div>
                     </div>
                   </div>
@@ -600,13 +600,13 @@
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                               <i class="fas fa-plus"></i>
-                              Jak mogę śledzić postępy SEO?
+                              <?php echo $lang['faq_9_title'] ?>
                           </button>
                         </h2>
                       </div>
                       <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
-                            Uzyskasz dostęp do indywidualnego panelu kontrolnego, który pozwoli ci na bieżąco, w jednym miejscu, obserwować pozycję twoich słów kluczowych, ruch i rozwój social mediów.
+                          <?php echo $lang['faq_9_text'] ?>
                         </div>
                       </div>
                   </div>
@@ -615,13 +615,13 @@
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                               <i class="fas fa-plus"></i>
-                              W jakich miastach działacie?
+                              <?php echo $lang['faq_10_title'] ?>
                           </button>
                         </h2>
                       </div>
                       <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
-                            Świadczymy nasze usługi na terenie całego kraju oraz współpracujemy z firmami zagranicznymi.
+                          <?php echo $lang['faq_10_text'] ?>
                         </div>
                       </div>
                   </div>
@@ -634,57 +634,59 @@
       	<div class="container">
 		  	<div class="row">
 				<div class="col-lg-6 text-left" style="padding-top: 100px;">
-					<h2 class="section-title">Bezpłatny audyt witryny & Wycena</h2>
-					<p>Wyślij nam adres swojej strony i dane kontaktowe, a my przeprowadzimy audyt techniczny aby sprawdzić, co możemy poprawić.</p>
-					<p>Kiedy zakończymy audyt otrzymasz drogą mailową listę problemów oraz wycenę ich rozwiązanina. Jesteśmy po to, aby twoja witryna zaczęła kroczyć we właściwym kierunku!</p>
+					<h2 class="section-title"><?php echo $lang['form_title'] ?></h2>
+					<p><?php echo $lang['form_p_1'] ?></p>
+					<p><?php echo $lang['form_p_2'] ?></p>
 				</div>
 				<div class="col-lg-6">
 						<div class="mailer">
 							<div class="wrapper">
 								<div class="inner">
-									<label for="name">Imię</label>
+									<label for="name"><?php echo $lang['form_name'] ?></label>
 									<input id="name" name="name" type="text">
 								</div>
 								<div class="inner">
-									<label for="email">E-Mail</label>
-									<input id="email" name="email" type="text">
+									<label for="email"><?php echo $lang['form_email'] ?></label>
+                  <input id="email" name="email" type="text">
+                  <div class="email_error"><?php echo $lang['form_email_error'] ?></div>
 								</div>
 							</div>
 							<div class="wrapper">
 								<div class="inner">
-									<label for="phone">Telefon</label>
-									<input id="phone" name="phone" type="text">
+									<label for="phone"><?php echo $lang['form_phone'] ?></label>
+                  <input id="phone" name="phone" type="text">
+                  <div class="phone_error"><?php echo $lang['form_phone_error'] ?></div>
 								</div>
 								<div class="inner">
-									<label for="website">Strona www</label>
+									<label for="website"><?php echo $lang['form_website'] ?></label>
 									<input id="website" name="website" type="text">
 								</div>
 							</div>
 							<div class="wrapper">
 								<div class="inner">
-									<label for="budget">Miesięczny budżet</label>
+									<label for="budget"><?php echo $lang['form_budget'] ?></label>
 									<input id="budget" name="budget" type="text">
 								</div>
 								<div class="inner">
-									<label for="">Forma kontaktu?</label>
+									<label for=""><?php echo $lang['form_contact'] ?></label>
 									<div class="checkbox">
 										<input  type="checkbox" value="Phone">
-										<label for="">Telefon</label>
+										<label for=""><?php echo $lang['form_checkbox_1'] ?></label>
 									</div>
 									<div class="checkbox">
 										<input type="checkbox" value="Email">
-										<label for="">Email</label>
+										<label for=""><?php echo $lang['form_checkbox_2'] ?></label>
 									</div>
 								</div>
 							</div>
 							<div class="wrapper">
 								<div class="inner textarea">
-									<label for="message">Wiadomość</label>
+									<label for="message"><?php echo $lang['form_message'] ?></label>
 									<textarea name="message" id="message" cols="30" rows="10"></textarea>
 								</div>
-								<div class="alertbox">Proszę wypełnić wszystkie pola poprawnie!</div>
+								<div class="alertbox"><?php echo $lang['form_alert'] ?></div>
 							</div>
-							<button id="mail-submit" class="link-button">Wyślij</button>
+							<button id="mail-submit" class="link-button"><?php echo $lang['form_button'] ?></button>
 						</div>
 					</div>
 			</div>
@@ -697,7 +699,7 @@
                 <img src="assets/images/logo.png" alt="" class="footer-logo">
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Biuro</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_1'] ?></h4>
               <div class="row">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>
@@ -708,7 +710,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Kontakt</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_2'] ?></h4>
               <div class="row">
                   <i class="far fa-envelope"></i> biuro@victoryinvest.pl
               </div>
@@ -720,9 +722,9 @@
       <div class="container">
 		  <span>Copyright &#9400; 2019</span>
 		  <span><strong>Victory Invest Group</strong></span>
-		  <span class="rights">Wszelkie prawa zastrzeżone</span>
-		  <span class="terms">Zasady i warunki</span>
-		  <span>Polityka prywatności</span>
+		  <span class="rights"><?php echo $lang['copy_text_1'] ?></span>
+		  <span class="terms"><?php echo $lang['copy_text_2'] ?></span>
+		  <span><?php echo $lang['copy_text_3'] ?></span>
 	  </div>
 	</div>
 	

@@ -1,3 +1,7 @@
+<?php
+  include "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,14 +30,14 @@
       src="https://kit.fontawesome.com/0708c757e1.js"
       crossorigin="anonymous"
     ></script>
-    <title>Victory Invest Group | Services</title>
+    <title>Victory Invest Group | Why us?</title>
   </head>
   <body>
     <header class="page_header">
       <div class="container">
         <nav class="navbar navbar-expand-lg indigo">
             <div class="logo_holder">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="assets/images/logo.png" alt="" class="img-fluid logo" />
                 </a>    
               </div>
@@ -51,24 +55,24 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
               <li class="nav-item active">
-                <a class="nav-link" href="servicesPL.html">USŁUGI</a>
+                <a class="nav-link" href="services.php"><?php echo $lang['services'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="our-resultsPL.html">NASZA PRACA</a>
+                <a class="nav-link" href="our-results.php"><?php echo $lang['results'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="why-usPL.html">DLACZEGO MY</a>
+                <a class="nav-link" href="why-us.php"><?php echo $lang['why_us'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contactPL.html">KONTAKT</a>
+                <a class="nav-link" href="contact.php"><?php echo $lang['contact'] ?></a>
               </li>
               <li class="nav-item">
-                <a href="why-usPL.html" class="poland-flag">
+                <a href="why-us.php?lang=pl" class="poland-flag">
                   <img src="assets/images/poland.png" alt="">
                 </a>
               </li>
               <li class="nav-item">
-                <a href="why-us.html" class="poland-flag">
+                <a href="why-us.php?lang=en" class="poland-flag">
                   <img src="assets/images/united-kingdom.png" alt="">
                 </a>
               </li>
@@ -80,19 +84,19 @@
 
     <section class="breadcrumbs">
       <div class="container">
-        <p><a href="index.html">Strona główna</a> » Dlaczego my</p>
+        <p><a href="index.php"><?php echo $lang['breadcrumbs'] ?></a> » <?php echo $lang['breadcrumbs_why'] ?></p>
       </div>
     </section>
 
     <section id="services">
       <div class="container">
-        <h2 class="section-title">Dlaczego my?</h2>
+        <h2 class="section-title"><?php echo $lang['why_title'] ?></h2>
         <p class="section-subtitle">
-          Reputacja & wyniki
+          <?php echo $lang['why_subtitle'] ?>
         </p>
-        <p>W branży pełnej wątpliwej jakości sprzedawców i agencji, które zarabiają ogromne pieniądze na osiąganiu przeciętnych wyników - reputacja jest wszystkim. Nasza renoma została zbudowana dzięki 100% transparentności działań. Poświęcamy naszym klientom uwagę, na którą zasługują, wykonując wysokiej jakości usługi z dobrymi, mierzalnymi rezultatami.</p>
-        <p>Nie wierz nam jednak na słowo! Przeczytaj opinie na nasz temat w Internecie, a będziesz miał pełny obraz tego jak wyglądała nasza współpraca z innymi klientami.</p>
-        <p>Zwróć uwagę, że większość tych recenzji jest długa, szczegółowa i precyzyjna, co potwierdza ich autentyczność. Tylko klient, który miał z nami dobre doświadczenia poświęciłby swój czas i energię, aby podzielić się swoją historią! Zawsze patrz z przymrużeniem oka na recenzje, które mają raptem jedno czy rwa zdania i wyglądają na wymuszone. Nie chodzi o liczbę opinii, a ich jakość i wiarygodność.</p>
+        <p><?php echo $lang['why_text_1'] ?></p>
+        <p><?php echo $lang['why_text_2'] ?></p>
+        <p><?php echo $lang['why_text_3'] ?></p>
         <div class="google-rating mb-5">
             <div class="col-md-6">
               <img src="https://www.seodirect.org/wp-content/uploads/2018/08/google-logo-seo-direct.svg" alt="" class="img-fluid">
@@ -109,47 +113,47 @@
                     </div>
               </div>
               <div class="row">
-                <a href="#">READ MORE REVIEWS</a>
+                <a href="#"><?php echo $lang['why_google'] ?></a>
               </div>
             </div>
           </div>
-          <h2 class="section-title">Wyniki</h2>
-          <p>Czytałeś już relacje naszych klientów? Zebraliśmy ich kilka aby podkreślić drobne sukcesy, które osiągnęliśmy w branży eCommerce poprzez lokalne i krajowe kampanie SEO. Oto przykład:</p>
+          <h2 class="section-title"><?php echo $lang['why_results'] ?></h2>
+          <p><?php echo $lang['why_results_text'] ?></p>
           <div class="mt-5 mb-5">
-            <h3>Wyniki</h3>
+            <h3><?php echo $lang['results_overwiev_results'] ?></h3>
             <div class="row case-numbers">
               <div class="col-md-6">
                 <div class="box">
                     <span class="percentage">630%</span>
-                    <span class="percentage-text">Przyrost <br />ruchu organicznego</span>
+                    <span class="percentage-text"><?php echo $lang['results_percentage_first'] ?></span>
                 </div>
                 
               </div>
               <div class="col-md-6">
                 <div class="box">
                     <span class="percentage">320%</span>
-                    <span class="percentage-text">Przyrost <br />klientów online</span>
+                    <span class="percentage-text"><?php echo $lang['results_percentage_second'] ?></span>
                 </div>  
               </div>
             </div>
           </div>
           <div class="mt-5 mb-5">
-            <h3>Organiczny wzrost słów kluczowych</h3>
+            <h3><?php echo $lang['results_keyword'] ?></h3>
             <div class="box">
               <img src="https://www.seodirect.org/wp-content/uploads/2019/07/Screen-Shot-2019-07-06-at-9.21.39-AM.png" alt="" class="img-fluid">
             </div>
           </div>
-          <p>Zgadujemy, że trafiłeś na tę stronę, ponieważ chciałeś znaleźć wiarygodną firmę SEO w Los Angeles. Wpisałeś słowa kluczowe związane z SEO w Google i znalazłeś nas. To nie był przypadek. Łatwość, z jaką znalazłeś naszą firmę w wyszukiwarce jest dokładnie tym, co chcemy zrobić dla Twojej firmy!</p>
-          <p>Pytanie, które przede wszystkim musisz sobie zadać przy zatrudnianiu agencji SEO brzmi: czy ta firma zajmuje wysoką pozycją w Google po wpisaniu odpowiednich słów kluczowych? Jeśli nie, to w jaki sposób mają dobrze wypozycjonować Twoją witrynę? Wpisz dowolne słowo kluczowe związane z SEO w Los Angeles w Google, a znajdziesz SEO Direct na pierwszej stronie. Nasze wyniki mówią same za siebie!</p>
+          <p><?php echo $lang['why_text_3'] ?></p>
+          <p><?php echo $lang['why_text_4'] ?></p>
       </div>
     </section>
 
     <section class="blue">
       <div class="container">
-        <h2 class="mb-4">Bezpłatny audyt witryny i wycena</h2>
-        <a href="contactPL.html" class="link-button">
+        <h2 class="mb-4"><?php echo $lang['blue_title'] ?></h2>
+        <a href="contact.php" class="link-button">
             <i class="far fa-envelope"></i>
-            napisz do nas
+            <?php echo $lang['blue_button'] ?>
         </a>
       </div>
     </section>
@@ -161,7 +165,7 @@
                 <img src="assets/images/logo.png" alt="" class="footer-logo">
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Biuro</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_1'] ?></h4>
               <div class="row">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>
@@ -172,7 +176,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Kontakt</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_2'] ?></h4>
               <div class="row">
                   <i class="far fa-envelope"></i> biuro@victoryinvest.pl
               </div>
@@ -182,13 +186,13 @@
     </footer>
     <div id="copyrights">
       <div class="container">
-		  <span>Copyright &#9400; 2019</span>
-		  <span><strong>Victory Invest Group</strong></span>
-		  <span class="rights">Wszelkie prawa zastrzeżone</span>
-		  <span class="terms">Zasady i warunki</span>
-		  <span>Polityka prywatności</span>
+        <span>Copyright &#9400; 2019</span>
+        <span><strong>Victory Invest Group</strong></span>
+        <span class="rights"><?php echo $lang['copy_text_1'] ?></span>
+        <span class="terms"><?php echo $lang['copy_text_2'] ?></span>
+        <span><?php echo $lang['copy_text_3'] ?></span>
+	    </div>
 	  </div>
-	</div>
 
     <script
       type="text/javascript"

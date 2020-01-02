@@ -63,16 +63,16 @@ $( document ).ready(function() {
   return false;
   }
 
-  $('#name, #email, #phone, #website, #budget, #message').on('keyup', function() {
+  $('#email, #phone').on('keyup', function() {
     if (telephoneCheck($('#phone').val())) {
-      $('#phone').removeClass('error');
+      $('.phone_error').hide();
     } else {
-      $('#phone').addClass('error');
+      $('.phone_error').addClass('error').show();
     }
     if (validateEmail($('#email').val())) {
-      $('#email').removeClass('error');
+      $('.email_error').hide();
     } else {
-      $('#email').addClass('error');
+      $('.email_error').addClass('error').show();
     }
   });
 
@@ -93,7 +93,7 @@ $( document ).ready(function() {
         data: postForm,
         success: function(response) {
           if (response) {
-            $('.alertbox').addClass('ok').html('Dziękujemy za wiadomość.');
+            $('.alertbox').html('Dziękujemy za wiadomość.').addClass('ok').show();
           }
         },
         error: function(jqXHR, textStatus, errorThrown) {

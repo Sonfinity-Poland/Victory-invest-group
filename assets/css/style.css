@@ -567,18 +567,22 @@ footer .far {
 }
 
 .alertbox {
-    border: red;
+    color: red;
     display: none;
-	color: #000;
     font-size: 18px;
     font-weight: 400;
     line-height: 29px;
     letter-spacing: -0.29px;
+    margin-top: 10px;
 }
 
 .alertbox.ok {
-	border: green;
-  display: block;
+  color: green;
+}
+
+.email_error, .phone_error {
+  margin-top: 5px;
+  display: none;
 }
 
 .breadcrumbs {

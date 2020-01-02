@@ -1,3 +1,7 @@
+<?php 
+  include "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,14 +30,14 @@
       src="https://kit.fontawesome.com/0708c757e1.js"
       crossorigin="anonymous"
     ></script>
-    <title>Victory Invest Group | Services</title>
+    <title>Victory Invest Group | Our results</title>
   </head>
   <body>
     <header class="page_header">
       <div class="container">
         <nav class="navbar navbar-expand-lg indigo">
           <div class="logo_holder">
-              <a href="index.html">
+              <a href="index.php">
                   <img src="assets/images/logo.png" alt="" class="img-fluid logo" />
               </a>   
           </div>
@@ -51,24 +55,24 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
               <li class="nav-item active">
-                <a class="nav-link" href="servicesPL.html">USŁUGI</a>
+                <a class="nav-link" href="services.php"><?php echo $lang['services'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="our-resultsPL.html">NASZA PRACA</a>
+                <a class="nav-link" href="our-results.php"><?php echo $lang['results'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="why-usPL.html">DLACZEGO MY</a>
+                <a class="nav-link" href="why-us.php"><?php echo $lang['why_us'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contactPL.html">KONTAKT</a>
+                <a class="nav-link" href="contact.php"><?php echo $lang['contact'] ?></a>
               </li>
               <li class="nav-item">
-                <a href="our-resultsPL.html" class="poland-flag">
+                <a href="our-results.php?lang=pl" class="poland-flag">
                   <img src="assets/images/poland.png" alt="">
                 </a>
               </li>
               <li class="nav-item">
-                <a href="our-results.html" class="poland-flag">
+                <a href="our-results.php?lang=en" class="poland-flag">
                   <img src="assets/images/united-kingdom.png" alt="">
                 </a>
               </li>
@@ -80,35 +84,35 @@
 
     <section class="breadcrumbs">
       <div class="container">
-        <p><a href="index.html">Strona główna</a> » Nasza praca</p>
+        <p><a href="index.php"><?php echo $lang['breadcrumbs'] ?></a> » <?php echo $lang['breadcrumbs_results'] ?></p>
       </div>
     </section>
 
     <section id="case-studies">
       <div class="container">
-        <h2 class="section-title">Nasza praca</h2>
+        <h2 class="section-title"><?php echo $lang['results_title'] ?></h2>
         <img src="https://www.seodirect.org/wp-content/uploads/2019/01/Textedly_Logo_Black-300x78.png" alt="" class="img-fluid case-logo">
         <p class="section-subtitle">
-          FIRMA Z BRANŻY MARKETINGU SMS
+          <?php echo $lang['results_subtitle'] ?>
         </p>
         <div class="row">
           <div class="col-md-6">
-            <h3>Najważniejsze słowa kluczowe</h3>
+            <h3><?php echo $lang['results_ranking'] ?></h3>
             <div class="keyword-box">
                 <i class="fab fa-google"></i>
-                "usługi sms"
+                "<?php echo $lang['results_ranking_1'] ?>"
             </div>
             <div class="keyword-box">
                 <i class="fab fa-google"></i>
-                "masowa wysyłka sms"
+                "<?php echo $lang['results_ranking_2'] ?>"
             </div>
             <div class="keyword-box">
                 <i class="fab fa-google"></i>
-                "masowe wiadomości sms"
+                "<?php echo $lang['results_ranking_3'] ?>"
             </div>
           </div>
           <div class="col-md-6">
-            <h3>Referencje</h3>
+            <h3><?php echo $lang['results_testimonial'] ?></h3>
             <div class="testimonial-box">
               <div class="row">
                 <img src="https://www.seodirect.org/wp-content/uploads/2019/01/james-kern-seo-direct-2-e1547588939523.jpg" alt="" class="avatar mr-0">
@@ -123,35 +127,35 @@
                   </div>
                 </div>  
               </div>
-              <p>Moja współpraca z SEO Direct przyniosła niesamowite efekty! Wiedza SEO Direct z zakresu SEO w połączeniu z indywidualnym podejściem do klienta i jego projektów zdecydowanie wyróżnia tę firmę na tle konkurencji.</p>
+              <p><?php echo $lang['results_testimonial_text'] ?></p>
             </div>
           </div>
         </div>
         <div class="mt-5 mb-5">
-          <h3>Charakterystyka współpracy</h3>
-          <p>Nasz klient chciał przeprowadzić ogólnokrajową kampanię na bardzo wymagającym rynku - usług marketingowych SMS dla firm.</p>
-          <p>Klient zbudował swoją witrynę przed rozpoczęciem naszej współpracy. Jak zwykle bywa, nie była odpowiednio zoptymalizowana pod kątem słów kluczowych. Nasz zespół pracował nad optymalizacją strony pod kątem wszystkich najważniejszych słów kluczowych. Po zakończeniu tego procesu natychmiast rozpoczęliśmy proces budowania linków. Witryna nie posiadała jakiejkolwiek pozycji, więc rozpoczynaliśmy od zera w bardzo konkurencyjnej branży. Do pół roku od rozpoczęcia kampanii firma naszego klienta widniała na drugiej strone wyszukiwarki w ponad 50% słów kluczowych. Po 9 miesiącach wyniki wskoczyły na pierwszą stronę.</p>
+          <h3><?php echo $lang['results_overview'] ?></h3>
+          <p><?php echo $lang['results_overview_text_1'] ?></p>
+          <p><?php echo $lang['results_overview_text_2'] ?></p>
         </div>
         <div class="mt-5 mb-5">
-          <h3>Wzrost organiczny słów kluczowych</h3>
+          <h3><?php echo $lang['results_keyword'] ?></h3>
           <div class="box">
             <img src="https://www.seodirect.org/wp-content/uploads/2019/07/Screen-Shot-2019-07-06-at-9.21.39-AM.png" alt="" class="img-fluid">
           </div>
         </div>
         <div class="mt-5 mb-5">
-          <h3>Wyniki</h3>
+          <h3><?php echo $lang['results_overwiev_results'] ?></h3>
           <div class="row case-numbers">
             <div class="col-md-6">
               <div class="box">
                   <span class="percentage">630%</span>
-                  <span class="percentage-text">Przyrost <br />ruchu organicznego</span>
+                  <span class="percentage-text"><?php echo $lang['results_percentage_first'] ?></span>
               </div>
               
             </div>
             <div class="col-md-6">
               <div class="box">
                   <span class="percentage">320%</span>
-                  <span class="percentage-text">Przyrost <br />klientów online</span>
+                  <span class="percentage-text"><?php echo $lang['results_percentage_second'] ?></span>
               </div>  
             </div>
           </div>
@@ -161,10 +165,10 @@
 
     <section class="blue">
       <div class="container">
-        <h2 class="mb-4">Zamów bezpłatny audyt strony i wycenę</h2>
-        <a href="contactPL.html" class="link-button">
+        <h2 class="mb-4"><?php echo $lang['blue_title'] ?></h2>
+        <a href="contact.php" class="link-button">
             <i class="far fa-envelope"></i>
-            Napisz do nas
+            <?php echo $lang['blue_button'] ?>
         </a>
       </div>
     </section>
@@ -176,7 +180,7 @@
                 <img src="assets/images/logo.png" alt="" class="footer-logo">
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Biuro</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_1'] ?></h4>
               <div class="row">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>
@@ -187,7 +191,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Kontakt</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_2'] ?></h4>
               <div class="row">
                   <i class="far fa-envelope"></i> biuro@victoryinvest.pl
               </div>
@@ -197,13 +201,13 @@
     </footer>
     <div id="copyrights">
       <div class="container">
-		  <span>Copyright &#9400; 2019</span>
-		  <span><strong>Victory Invest Group</strong></span>
-		  <span class="rights">Wszelkie prawa zastrzeżone</span>
-		  <span class="terms">Zasady i warunki</span>
-		  <span>Polityka prywatności</span>
+        <span>Copyright &#9400; 2019</span>
+        <span><strong>Victory Invest Group</strong></span>
+        <span class="rights"><?php echo $lang['copy_text_1'] ?></span>
+        <span class="terms"><?php echo $lang['copy_text_2'] ?></span>
+        <span><?php echo $lang['copy_text_3'] ?></span>
+	    </div>
 	  </div>
-	</div>
 
     <script
       type="text/javascript"

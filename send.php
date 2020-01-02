@@ -15,7 +15,7 @@ function sendmail($to, $subject, $message, $from) {
 $content = nl2br("Name: ".$_POST['name']."\nPhone: ".$_POST['phone']."\nWebsite: ".$_POST['website']."\nBudget: ".$_POST['budget']."\nMessage: ".$_POST['message']);
 
 
-echo sendmail('biuro@victoryinvest.pl', 'Victory Invest', $content, $_POST['email']);
+echo sendmail('test@gmail.com', 'Victory Invest', $content, $_POST['email']);
 	
 
 ?>

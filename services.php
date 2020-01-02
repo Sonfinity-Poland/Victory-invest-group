@@ -1,3 +1,9 @@
+<?php 
+
+  include "config.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,7 +39,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg indigo">
             <div class="logo_holder">
-                <a href="indexPL.html">
+                <a href="index.php">
                     <img src="assets/images/logo.png" alt="" class="img-fluid logo" />
                 </a> 
               </div>
@@ -51,24 +57,24 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
               <li class="nav-item active">
-                <a class="nav-link" href="#">SERVICES</a>
+                <a class="nav-link" href="services.php"><?php echo $lang['services'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="our-results.html">OUR RESULTS</a>
+                <a class="nav-link" href="our-results.php"><?php echo $lang['results'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="why-us.html">WHY US</a>
+                <a class="nav-link" href="why-us.php"><?php echo $lang['why_us'] ?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">CONTACT</a>
+                <a class="nav-link" href="contact.php"><?php echo $lang['contact'] ?></a>
               </li>
               <li class="nav-item">
-                <a href="servicesPL.html" class="poland-flag">
+                <a href="services.php?lang=pl" class="poland-flag">
                   <img src="assets/images/poland.png" alt="">
                 </a>
               </li>
               <li class="nav-item">
-                <a href="services.html" class="poland-flag">
+                <a href="services.php?lang=en" class="poland-flag">
                   <img src="assets/images/united-kingdom.png" alt="">
                 </a>
               </li>
@@ -80,18 +86,15 @@
 
     <section class="breadcrumbs">
       <div class="container">
-        <p><a href="index.html">Home</a> » Services</p>
+        <p><a href="index.php"><?php echo $lang['breadcrumbs'] ?></a> » <?php echo $lang['breadcrumbs_services'] ?></p>
       </div>
     </section>
 
     <section id="services">
       <div class="container">
-        <h2 class="section-title">DIGITAL MARKETING SERVICES</h2>
+        <h2 class="section-title"><?php echo $lang['services_title'] ?></h2>
         <p class="section-subtitle">
-          Our internet marketing services fall under a few different types of
-          campaigns. We understand that every customer has different goals and
-          expectations. During our consultation we can help identify which
-          digital marketing service makes the most sense for your business.
+          <?php echo $lang['services_subtitle'] ?>
         </p>
         <div class="row">
           <div class="col-lg-12 mt-0">
@@ -101,19 +104,9 @@
               class="img-fluid"
             />
             <div class="service-description">
-              <h2>LOCAL SEO</h2>
+              <h2><?php echo $lang['services_box_1_title'] ?></h2>
               <p>
-                If you’re a small to medium-sized business then showing up on
-                Google’s local results is imperative to maximizing visibility.
-                Ranking organically is also very important to local businesses,
-                but showing up on Google Maps or the local 3 pack is vital to
-                attract people in your immediate vicinity. We increase rankings
-                on the local side by building authority and auditing your
-                citations to make sure everything is consistent with your name,
-                address and phone number (NAP). The days of relying on foot
-                traffic and referrals are gone. Without ranking on Google local
-                your business might as well not exist. It’s time to start
-                getting more customers through your door.
+                <?php echo $lang['services_box_1_text'] ?>
               </p>
             </div>
           </div>
@@ -124,9 +117,9 @@
               class="img-fluid"
             />
             <div class="service-description">
-              <h2>NATIONAL SEO</h2>
+              <h2><?php echo $lang['services_box_2_title'] ?></h2>
               <p>
-                National campaigns generally involve big businesses or eCommerce companies that need to reach a broader audience. The biggest difference between local and national campaigns are the competitiveness of the keywords being targeted and the time it takes to achieve meaningful results. Campaigns at this level involve a long-term investment and a tremendous amount of patience to be successful. When competing nationally it’s important to understand that you’ll be battling against huge brands with substantial authority and unlimited budgets. You’ll need to step up to the plate with an aggressive budget to compete in this arena.
+                <?php echo $lang['services_box_2_text'] ?>
               </p>
             </div>
           </div>
@@ -137,9 +130,9 @@
               class="img-fluid"
             />
             <div class="service-description">
-              <h2>ECOMMERCE SEO</h2>
+              <h2><?php echo $lang['services_box_3_title'] ?></h2>
               <p>
-                Most web developers build sites that are aesthetically pleasing but not necessarily SEO friendly. Our job is to crawl the site and diagnose the technical issues hurting your rankings. Once we’ve assessed the problems and prioritized them, we communicate the changes to your developer or implement them ourselves. It’s incredibly important that your site is running optimally and not being held back by technical issues. Those issues can greatly affect your organic rankings. Whether it’s a small service site or big eCommerce site with thousands of products, we’re ready and willing to audit any site on any platform.
+                <?php echo $lang['services_box_3_text'] ?>
               </p>
             </div>
           </div>
@@ -151,9 +144,9 @@
               style="padding: 0 10px;"
             />
             <div class="service-description">
-              <h2>SEO AUDITS</h2>
+              <h2><?php echo $lang['services_box_4_title'] ?></h2>
               <p>
-                If you’re looking to instantly show up at the top of Google or social sites then PPC is the way to go. Dive into any market and start bidding on the keywords your customers are searching for or have interest in. It is by far the quickest most effective way to start driving targeted traffic to your site. Don’t be fooled by the simplicity of setting up a PPC campaign. Getting it started is the easy part but having it return a significant ROI is another story. Managing these platforms and actively adjusting your campaign is something that should only be handled by professionals. PPC management is a crucial component to any marketing campaign and shouldn’t be ignored.
+                <?php echo $lang['services_box_4_text'] ?>
               </p>
             </div>
           </div>
@@ -164,19 +157,9 @@
               class="img-fluid"
             />
             <div class="service-description">
-              <h2>PPC MANAGEMENT</h2>
+              <h2><?php echo $lang['services_box_5_title'] ?></h2>
               <p>
-                If you’re a small to medium-sized business then showing up on
-                Google’s local results is imperative to maximizing visibility.
-                Ranking organically is also very important to local businesses,
-                but showing up on Google Maps or the local 3 pack is vital to
-                attract people in your immediate vicinity. We increase rankings
-                on the local side by building authority and auditing your
-                citations to make sure everything is consistent with your name,
-                address and phone number (NAP). The days of relying on foot
-                traffic and referrals are gone. Without ranking on Google local
-                your business might as well not exist. It’s time to start
-                getting more customers through your door.
+                <?php echo $lang['services_box_5_text'] ?>
               </p>
             </div>
           </div>
@@ -186,10 +169,10 @@
 
     <section class="blue">
       <div class="container">
-        <h2 class="mb-4">Get a free website audit and proposal</h2>
-        <a href="contact.html" class="link-button">
+        <h2 class="mb-4"><?php echo $lang['blue_title'] ?></h2>
+        <a href="contact.php" class="link-button">
             <i class="far fa-envelope"></i>
-            Contact us
+            <?php echo $lang['blue_button'] ?>
         </a>
       </div>
     </section>
@@ -201,7 +184,7 @@
                 <img src="assets/images/logo.png" alt="" class="footer-logo">
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Office</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_1'] ?></h4>
               <div class="row">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>
@@ -212,7 +195,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-column-heading">Contact</h4>
+              <h4 class="footer-column-heading"><?php echo $lang['footer_header_2'] ?></h4>
               <div class="row">
                   <i class="far fa-envelope"></i> biuro@victoryinvest.pl
               </div>
@@ -224,9 +207,9 @@
       <div class="container">
         <span>Copyright &#9400; 2019</span>
         <span><strong>Victory Invest Group</strong></span>
-        <span class="rights">All Rights Reserved</span>
-        <span class="terms">Terms and Conditions</span>
-        <span>Privacy Policy</span>
+        <span class="rights"><?php echo $lang['copy_text_1'] ?></span>
+        <span class="terms"><?php echo $lang['copy_text_2'] ?></span>
+        <span><?php echo $lang['copy_text_3'] ?></span>
 	    </div>
 	  </div>
 
