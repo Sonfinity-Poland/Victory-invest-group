@@ -7,11 +7,12 @@
 - Index.html zmieniasz na index.php, następnie w tym pliku na samej górze przed znacznikiem <html> dodajesz
  ```
   <?php
-    include "config.php"
+    include "config.php";
   ?>
 ```
 - W głównym folderze tworzysz plik config.php
-``` <?php
+``` 
+ <?php
     session_start();
 
     if(!isset($_SESSION['lang'])) {
@@ -37,6 +38,39 @@
     $lang = array();
     
     $lang["NAZWA_ZMIENNEJ"] = "TREŚC ZMIENNEJ";
-np. $lang["navbar_homepage"] = "STRONA GŁÓWNA";
+    $lang["navbar_homepage"] = "STRONA GŁÓWNA";
+ ?>
 ```
 
+#3.
+
+- Każdą zmienną zastępujemy text w pliku index.php, który chcemy tłumaczyć
+
+```
+  <nav>
+    <ul>
+      <li>STRONA GŁÓWNA</li> - zmieniamy na:
+      <li><?php echo $lang['navbar_homepage'] ?></li>
+    </ul>
+  </nav>
+```
+Posępujemy tak w przypadku każdego tekstu jaki chcemy zmienić, gdy juz skończysz uzupełniać zmienne w pl.php kopiujesz wszystko do en.php i po prostu pod zmienne podstawiasz nazwę tłumaczoną na angielki.
+
+#4.
+
+- Ostatnim etapem jest podpięcie pod przyciski odpowiedniej ścieżki do zmiany języka (w href dodajemy "?lang=pl" oraz "?lang-en")
+
+```
+
+  <li class="nav-item">
+    <a href="index.php?lang=pl" class="poland-flag">
+      <img src="assets/images/poland.png" alt="">
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="index.php?lang=en" class="poland-flag">
+      <img src="assets/images/united-kingdom.png" alt="">
+    </a>
+  </li>
+  
+```
